@@ -4,9 +4,9 @@ A Python tool that plays out a classic SOC (Security Operations Center) analyst 
 
 ## Scenario
 
-You're a junior analyst at a small company. `webserver01` is a Linux box reachable over SSH, and its `auth.log` from the past week just landed in your queue. Somewhere in ~200 log lines are a handful of employees logging in normally, a couple of scanners/bots hammering the server with password guesses, and — if you're not careful — a successful break-in that looks almost identical to everything else unless you know what to look for.
+I am a junior analyst at a small company. `webserver01` is a Linux box reachable over SSH, and its `auth.log` from the past week just landed in your queue. Somewhere in ~200 log lines are a handful of employees logging in normally, a couple of scanners/bots hammering the server with password guesses and if you're not careful a successful break-in that looks almost identical to everything else unless you know what to look for.
 
-The goal: build a repeatable tool (not a one-off manual read-through) that parses the log, flags the source IPs behaving like brute-force attacks, flags any IP whose failed attempts were immediately followed by a successful login (a likely compromise), and produces a report a manager or incident responder could actually act on.
+The goal: build a repeatable tool (not a one-off manual read-through) that parses the log, flags the source IPs behaving like brute-force attacks, flags any IP whose failed attempts were immediately followed by a successful login (a likely compromise) and produces a report a manager or incident responder could actually act on.
 
 ## Approach
 
