@@ -1,0 +1,3 @@
+ip,severity,total_failed_attempts,max_failed_in_window,first_seen,last_seen,compromised_user,success_time
+103.42.88.201,HIGH - BRUTE FORCE,45,45,2026-08-07 03:12:00,2026-08-07 03:15:35,,
+198.51.100.77,CRITICAL - LIKELY COMPROMISE,20,20,2026-08-08 02:41:00,2026-08-08 02:41:57,root,2026-08-08 02:42:04

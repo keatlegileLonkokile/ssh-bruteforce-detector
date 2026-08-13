@@ -1,0 +1,24 @@
+============================================================
+SSH AUTH LOG - SECURITY ANALYSIS SUMMARY
+============================================================
+Total login events analyzed : 197
+  Failed attempts           : 162
+  Successful logins         : 35
+Unique source IPs           : 7
+
+Detection thresholds: >= 5 failed logins within 10 minutes = brute-force flag
+
+CRITICAL ALERTS - 1 likely compromised account(s):
+  - 198.51.100.77 -> successful login as 'root' at 2026-08-08 02:42:04 after 20 failed attempts starting 2026-08-08 02:41:00
+
+HIGH - 2 IP(s) flagged for brute-force behavior:
+  - 103.42.88.201: 45 total failed attempts (peak 45 within 10 min), active 2026-08-07 03:12:00 to 2026-08-07 03:15:35
+  - 198.51.100.77: 20 total failed attempts (peak 20 within 10 min), active 2026-08-08 02:41:00 to 2026-08-08 02:41:57 [ALSO LED TO COMPROMISE]
+
+RECOMMENDATIONS
+------------------------------------------------------------
+1. Block/rate-limit the flagged IPs at the firewall or fail2ban.
+2. Force a password reset and review activity for any compromised accounts.
+3. Disable password auth for SSH in favor of key-based authentication.
+4. Enable and monitor fail2ban (or equivalent) to auto-block repeated failures.
+5. Restrict SSH exposure with a bastion host / VPN and IP allow-listing.
